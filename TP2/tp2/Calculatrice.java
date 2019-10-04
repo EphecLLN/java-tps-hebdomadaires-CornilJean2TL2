@@ -42,10 +42,6 @@ public class Calculatrice {
 	}
 	
 	
-	
-	
-	
-	
 	//Méthodes
 	
 	/**
@@ -70,11 +66,10 @@ public class Calculatrice {
 	}
 	
 	
-	/**
-	 * Renvoie une représentation textuelle de la valeur affichée sur la calculatrice
-	 */
+	@Override
 	public String toString() {
-		return "La calculatrice affiche la valeur " + getValeurCourante();
+		return "Calculatrice [valeurCourante=" + valeurCourante + ", getValeurCourante()=" + getValeurCourante()
+				+ ", toString()=" + super.toString() + "]";
 	}
 	
 	/**
