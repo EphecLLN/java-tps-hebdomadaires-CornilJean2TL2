@@ -7,11 +7,11 @@ package tp2;
  */
 public class Etudiant {
 	//Variables d'instance
-	String nom;
-	String prénom;
-	int matricule;
+	private String nom;
+	private String prénom;
+	private int matricule;
 	//Cette variable d'instance est du type Date, disponible dans le même package
-	Date dateNaissance;
+	private Date dateNaissance;
 	
 	/*
 	 * Méthode main qui crée un étudiant et initialise les variables d'instance au départ de la ligne de commande
@@ -26,6 +26,44 @@ public class Etudiant {
 		etu.dateNaissance.jour = Integer.parseInt(args[3]);
 		etu.dateNaissance.mois = Integer.parseInt(args[4]);
 		etu.dateNaissance.année = Integer.parseInt(args[5]);
+		System.out.println(etu.toString());
+	}
+
+	@Override
+	public String toString() {
+		return "Nom: " + nom + ", Prénom: " + prénom + ", Matricule: " + matricule;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrénom() {
+		return prénom;
+	}
+
+	public void setPrénom(String prénom) {
+		this.prénom = prénom;
+	}
+
+	public int getMatricule() {
+		return matricule;
+	}
+
+	public void setMatricule(int matricule) {
+		this.matricule = matricule;
+	}
+
+	public Date getDateNaissance() {
+		return dateNaissance;
+	}
+
+	public void setDateNaissance(Date dateNaissance) {
+		this.dateNaissance = dateNaissance;
 	}
 
 }
